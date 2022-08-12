@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "firstName": "Ulrick",
+    "lastName": "Slate",
+    "email": "uslate0@wikia.com",
+    "gender": "Male",
+    "ipAddress": "236.15.192.227"
+  },
+  {
+    "id": 2,
+    "firstName": "Paola",
+    "lastName": "Sheppey",
+    "email": "psheppey1@behance.net",
+    "gender": "Female",
+    "ipAddress": "109.248.204.24"
+  },
+  {
+    "id": 3,
+    "firstName": "Manda",
+    "lastName": "Reddlesden",
+    "email": "mreddlesden2@addtoany.com",
+    "gender": "Genderqueer",
+    "ipAddress": "99.169.30.222"
+  },
+  {
+    "id": 4,
+    "firstName": "Anneliese",
+    "lastName": "Perview",
+    "email": "aperview3@quantcast.com",
+    "gender": "Female",
+    "ipAddress": "3.123.83.187"
+  },
+  {
+    "id": 5,
+    "firstName": "Rosco",
+    "lastName": "Ivancevic",
+    "email": "rivancevic4@cnn.com",
+    "gender": "Male",
+    "ipAddress": "147.209.144.29"
+  },
+  {
+    "id": 6,
+    "firstName": "Tedda",
+    "lastName": "O'Neal",
+    "email": "toneal5@surveymonkey.com",
+    "gender": "Female",
+    "ipAddress": "62.26.168.90"
+  },
+  {
+    "id": 7,
+    "firstName": "Paolina",
+    "lastName": "Gant",
+    "email": "pgant6@state.tx.us",
+    "gender": "Female",
+    "ipAddress": "99.144.215.213"
+  },
+  {
+    "id": 8,
+    "firstName": "Rafe",
+    "lastName": "Kinnane",
+    "email": "rkinnane7@hp.com",
+    "gender": "Male",
+    "ipAddress": "10.220.116.107"
+  },
+  {
+    "id": 9,
+    "firstName": "Elizabet",
+    "lastName": "Ruckledge",
+    "email": "eruckledge8@newsvine.com",
+    "gender": "Female",
+    "ipAddress": "114.38.182.87"
+  },
+  {
+    "id": 10,
+    "firstName": "Dirk",
+    "lastName": "Colborn",
+    "email": "dcolborn9@people.com.cn",
+    "gender": "Male",
+    "ipAddress": "147.54.139.232"
+  }
+]
