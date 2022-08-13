@@ -22,6 +22,12 @@ The property should be a JSON array
 jq -r '.<property_name> | join(" ")'
 ```
 
+### Turn a ISO8601 date into unix epoch
+
+```
+jq '(.<property_name> | split(".")[0] + "Z" | fromdate))'
+```
+
 ### Get the current runtime of ECS tasks
 
 Requires the AWS CLI and appropriate credentials
