@@ -28,6 +28,12 @@ jq -r '.<property_name> | join(" ")'
 jq '(.<property_name> | split(".")[0] + "Z" | fromdate))'
 ```
 
+### Account for timezone while doing date math
+
+```
+jq '((now | localtime | mktime)'
+```
+
 ### Get the current runtime of ECS tasks
 
 Requires the AWS CLI and appropriate credentials
@@ -40,4 +46,10 @@ aws ecs describe-tasks --tasks $(aws ecs list-tasks --cluster <CLUSTER_NAME> --d
 
 ```
 cat moresampledata.json | jq '.[] | .appVersion = { versionString: .appVersion, majorVersion: (.appVersion | split(".")[0]), minorVersion: (.appVersion | split(".")[1]), patchVersion: (.appVersion | split(".")[2]?) }'
+```
+
+### Create a function
+
+```
+cat numericalsampledata.json | jq 'def unixepoch(d): d | fromdate; .[] | .createdAt = (unixepoch(.createdAt))'
 ```
