@@ -35,3 +35,9 @@ Requires the AWS CLI and appropriate credentials
 ```
 aws ecs describe-tasks --tasks $(aws ecs list-tasks --cluster <CLUSTER_NAME> --desired-status RUNNING | jq -r '.taskArns | join(" ")') --cluster <CLUSTER_NAME> | jq '.tasks | [ .[] | { taskArn: .taskArn, containerInstanceArn: .containerInstanceArn?, startedAt: .startedAt, runningTimeInSeconds: ((now | localtime | mktime) - (.startedAt | split(".")[0] + "Z" | fromdate)) } ]'
 ```
+
+### Split app versions into semver parts
+
+```
+cat moresampledata.json | jq '.[] | .appVersion = { versionString: .appVersion, majorVersion: (.appVersion | split(".")[0]), minorVersion: (.appVersion | split(".")[1]), patchVersion: (.appVersion | split(".")[2]?) }'
+```
