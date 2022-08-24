@@ -56,6 +56,20 @@ cat numericalsampledata.json | jq 'def unixepoch(d): d | fromdate; .[] | .create
 
 ### Select from a list of objects based on the key
 
+#### Select single condition and return the object
+
 ```
-cat sampledata.json | jq '.[] | [select((.id==2) or (.id==4))]'
+cat sampledata.json | jq '.[] | select(.id == 2)'
+```
+
+#### Select multiple conditions
+
+```
+cat sampledata.json | jq '.[] | select(.id | IN(2, 4))'
+```
+
+#### Select multiple conditions and return as array
+
+```
+cat sampledata.json | jq '[.[] | select(.id | IN(2, 4))]'
 ```
