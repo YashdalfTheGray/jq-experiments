@@ -66,6 +66,8 @@ cat sampledata.json | jq '.[] | select(.id == 2)'
 
 ```
 cat sampledata.json | jq '.[] | select(.id | IN(2, 4))'
+
+cat sampledata.json | jq '.[] | select((.id | IN(2, 4)) or .lastName == "Gant")'
 ```
 
 #### Select multiple conditions and return as array
