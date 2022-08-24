@@ -53,3 +53,9 @@ cat moresampledata.json | jq '.[] | .appVersion = { versionString: .appVersion, 
 ```
 cat numericalsampledata.json | jq 'def unixepoch(d): d | fromdate; .[] | .createdAt = (unixepoch(.createdAt))'
 ```
+
+### Select from a list of objects based on the key
+
+```
+cat sampledata.json | jq '.[] | [select((.id==2) or (.id==4))]'
+```
